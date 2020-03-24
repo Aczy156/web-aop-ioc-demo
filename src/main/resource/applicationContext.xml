@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/context
+       https://www.springframework.org/schema/context/spring-context.xsd">
+
+<!--    XML配置方式-->
+
+<!--    <bean id="accountDAO" class="org.csu.spring.demo.IOC.persistence.AccountDAOimpl"></bean>-->
+<!--    <bean id="account" class="org.csu.spring.demo.IOC.domain.Account">-->
+<!--&lt;!&ndash;        set注入&ndash;&gt;-->
+<!--&lt;!&ndash;        <property name="username" value="Phy"/>&ndash;&gt;-->
+<!--&lt;!&ndash;        <property name="password" value="123"/>&ndash;&gt;-->
+<!--&lt;!&ndash;        <property name="age" value="19"/>&ndash;&gt;-->
+<!--&lt;!&ndash;        constructor注入&ndash;&gt;-->
+<!--        <constructor-arg name="username" value="Phy"/>-->
+<!--        <constructor-arg name="password" value="123456"/>-->
+<!--        <constructor-arg name="age" value="18"/>-->
+<!--    </bean>-->
+
+<!--    <bean id="accountService" class="org.csu.spring.demo.IOC.service.AccountService">-->
+<!--&lt;!&ndash;        <property name="accountDAO" ref="accountDAO"/>&ndash;&gt;-->
+
+<!--        <constructor-arg name="accountDAO" ref="accountDAO"/>-->
+<!--    </bean>-->
+
+
+<!--    注解方式 1、注解方式依赖Spring-aop实现=>pom里导入spring-aop依赖 2、开启注解方式 包扫描 -->
+    <context:component-scan base-package="org.csu.spring.demo.IOC"/>
+
+
+</beans>

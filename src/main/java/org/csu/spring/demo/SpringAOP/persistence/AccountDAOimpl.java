@@ -1,6 +1,9 @@
-package org.csu.spring.demo.IOC.persistence;
+package org.csu.spring.demo.SpringAOP.persistence;
 
-public class DAOimpl implements DAO {
+import org.springframework.stereotype.Repository;
+
+@Repository("accountDAO")
+public class AccountDAOimpl implements AccountDAO {
     @Override
     public void insert() {
         System.out.println("增加用户");
